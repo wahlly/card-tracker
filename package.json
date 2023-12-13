@@ -1,0 +1,40 @@
+{
+  "name": "card-tracker",
+  "version": "1.0.0",
+  "description": "Zywa engineering task 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./build/index.js",
+    "dev": "tsc-watch --onSuccess \"node ./build/index.js\"",
+    "copy:templates": "cpx './source/modules/templates/**' 'build/modules/templates'",
+    "build": "rimraf build && tsc -p tsconfig.json && npm run copy:templates",
+    "watch:server": "nodemon './build/index.js' --watch './build'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahlly/card-tracker.git"
+  },
+  "keywords": [
+    "card",
+    "tracker"
+  ],
+  "author": "wahllywest",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wahlly/card-tracker/issues"
+  },
+  "homepage": "https://github.com/wahlly/card-tracker#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.4",
+    "cpx": "^1.5.0"
+  }
+}
