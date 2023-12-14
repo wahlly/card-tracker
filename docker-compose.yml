@@ -6,7 +6,7 @@ services:
       - .env
     ports:
       - "3000:3000"
-    # image: ./dockerfile
+    image: wahllywest/card-tracker
     links:
       - mongo
   mongo:

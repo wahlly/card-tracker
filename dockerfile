@@ -1,10 +1,13 @@
-#using alpine as the base image due to its small size
-FROM node:alpine
-#set the working directory in the container
+FROM node:lts-alpine
+
 WORKDIR /app
-#copy all files, package.json and package-lock.json files
-COPY ./build /app
-COPY package*.json /app/
+
+COPY package.json package-lock.json ./
+
 RUN npm install
+
+COPY . ./
+
+RUN npm run build
 EXPOSE 3000
-CMD node ./index.js
+CMD npm run start

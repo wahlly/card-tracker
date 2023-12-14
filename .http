@@ -7,9 +7,13 @@ POST http://localhost:3000/generate_new_card
 Content-Type: application/json
 
 {
-      "userContact": "534534534"
+      "userContact": "534534654"
 }
 
 ###
 
 GET http://localhost:3000/get_card_status?cardId=ZYW8890
+
+###
+
+GET http://localhost:3000/get_card_status?userContact=0585949014
