@@ -1,0 +1,15 @@
+
+GET http://localhost:3000
+
+###
+
+POST http://localhost:3000/generate_new_card
+Content-Type: application/json
+
+{
+      "userContact": "534534534"
+}
+
+###
+
+GET http://localhost:3000/get_card_status?cardId=ZYW8890
